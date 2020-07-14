@@ -1,10 +1,14 @@
 import React from 'react';
 
-function MoviesList(){
+function MoviesList(props){
     return(
+      <>
+        <h1>Movies List</h1>
         <div className='MoviesList'>
-            <h1>Movies List</h1>
+          {props.movies}
         </div>
-    )
+      </>
+    );
 }
+
 export default MoviesList;

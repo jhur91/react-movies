@@ -9,4 +9,10 @@ var moviesSchema = new Schema({
 },{
   timestamps: true
 });
+
+// var moviesSchema = {
+//   {title: "Star Wars", year: 1991},
+//   {title: "Groundhog Day", year: 1980}
+// }
+
 module.exports = mongoose.model('Movie', moviesSchema);
