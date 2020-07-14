@@ -10,6 +10,7 @@ var favicon = require('serve-favicon');
   /*--- Spot for recordRouter ---*/
 
   var moviesRouter = require('./routes/api/movies');
+  var usersRouter = require('./routes/api/users')
 
 // more basics
 var app = express();
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
   /*--- Spot for api routes ---*/
   app.use('/api/movies', moviesRouter);
+  app.use('/api/users', usersRouter);
 
   /*--- Spot for catch all route ---*/
   app.get('/*', function(req, res) {
