@@ -10,7 +10,8 @@ var favicon = require('serve-favicon');
   /*--- Spot for recordRouter ---*/
 
   var moviesRouter = require('./routes/api/movies');
-  var usersRouter = require('./routes/api/users')
+  var usersRouter = require('./routes/api/users');
+  var commentsRouter = require('./routes/api/comments');
 
 // more basics
 var app = express();
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'build')));
   /*--- Spot for api routes ---*/
   app.use('/api/movies', moviesRouter);
   app.use('/api/users', usersRouter);
+  app.use('/api/comments', commentsRouter);
 
   /*--- Spot for catch all route ---*/
   app.get('/*', function(req, res) {
