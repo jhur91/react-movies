@@ -7,6 +7,7 @@ import AddComments from '../../components/AddComments/AddComments';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
 import { Route, Switch, NavLink, Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 
@@ -40,9 +41,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">Movies Review APP</header>
-          <nav>
+          {/* <nav>
             <NavLink exact to='/api/movies'>Movies LIST</NavLink>
-          </nav>
+          </nav> */}
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
@@ -54,19 +55,6 @@ class App extends Component {
               movies={this.state.movies} 
             />
           }/>
-          {/* <Route exact path='/all' render={() =>
-            <section>
-            {this.state.movies.map((movie, idx) => 
-              <Link
-                to={`/movies/${idx}`}
-                key={movie.title}
-              >
-                {movie.name}
-              </Link>
-            )}
-          </section>
-          }
-          /> */}
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}
@@ -79,9 +67,12 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          {/* <Route exact path='/all' render={() =>
-			      <GuitarIndex />
-          }/> */}
+          <Route exact path='/details' render={({location}) => 
+            <MovieDetailPage location={location}/>
+          } />
+
+
+
         </Switch>
         <AddComments />
         <CommentsList />
