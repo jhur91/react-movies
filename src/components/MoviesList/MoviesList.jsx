@@ -5,7 +5,7 @@ function MoviesList(props){
       <>
         <h1>Movies List</h1>
         <div className='MoviesList'>
-          {props.movies}
+          {props.movies.map( movie => movie.title)};
         </div>
       </>
     );

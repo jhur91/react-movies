@@ -3,7 +3,8 @@ import './App.css';
 import * as movieAPI from '../../services/movies-api';
 import MoviesList from '../../components/MoviesList/MoviesList';
 import NavBar from '../../components/NavBar/NavBar';
-import Comments from '../../components/Comments/comments'
+import AddComments from '../../components/AddComments/AddComments';
+import CommentsList from '../../components/CommentsList/CommentsList';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import { Route, Switch, NavLink, Link } from 'react-router-dom';
@@ -30,9 +31,9 @@ class App extends Component {
   /*--- Lifecycle Methods ---*/
 
   async componentDidMount() {
-    const movies = await movieAPI.getAll();
-    this.setState({ movies: movies.results});
-    console.log(movies.results);
+    const allMovies = await movieAPI.getAll();
+    const movies = allMovies.results;
+    this.setState({ movies });
   }
 
   render() {
@@ -52,17 +53,20 @@ class App extends Component {
             <MoviesList 
               movies={this.state.movies} 
             />
-          //   <section>
-          //   {this.state.movies.map((movie, idx) => 
-          //     <Link
-          //       to={`/movies/${idx}`}
-          //       key={movie.name}
-          //     >
-          //       {movie.name}
-          //     </Link>
-          //   )}
-          // </section>
           }/>
+          {/* <Route exact path='/all' render={() =>
+            <section>
+            {this.state.movies.map((movie, idx) => 
+              <Link
+                to={`/movies/${idx}`}
+                key={movie.title}
+              >
+                {movie.name}
+              </Link>
+            )}
+          </section>
+          }
+          /> */}
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}
@@ -79,7 +83,8 @@ class App extends Component {
 			      <GuitarIndex />
           }/> */}
         </Switch>
-        <Comments />
+        <AddComments />
+        <CommentsList />
       </div>
     );
   }
