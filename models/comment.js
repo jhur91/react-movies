@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
 //create schema for comment
 const commentSchema = new Schema({
-  action: {
-    type: String,
-    required: [true, 'The item text field is required']
-  }
+  content: String,
+  rating: {type: Number, min: 1, max: 5, default: 5},
+  id: Number
+}, {
+  timestamps: true
 })
 //create model for item
-const Comment = mongoose.model('comment', CommentSchema);
-module.exports = Comment;
+module.exports = mongoose.model('Comment', commentSchema);

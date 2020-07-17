@@ -3,15 +3,14 @@ var path = require('path');
 var logger = require('morgan');
 var favicon = require('serve-favicon');
 
-  /*--- Spot for database ---*/
-  require('dotenv').config()
-  require('./config/database');
+/*--- Spot for database ---*/
+require('dotenv').config()
+require('./config/database');
 
-  /*--- Spot for recordRouter ---*/
+/*--- Spot for recordRouter ---*/
 
-  var moviesRouter = require('./routes/api/movies');
-  var usersRouter = require('./routes/api/users');
-  var commentsRouter = require('./routes/api/comments');
+var usersRouter = require('./routes/api/users');
+var commentsRouter = require('./routes/api/comments');
 
 // more basics
 var app = express();
@@ -20,15 +19,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
-  /*--- Spot for api routes ---*/
-  app.use('/api/movies', moviesRouter);
-  app.use('/api/users', usersRouter);
-  app.use('/api/comments', commentsRouter);
+/*--- Spot for api routes ---*/
+app.use('/api/users', usersRouter);
+app.use('/api/comments', commentsRouter);
 
-  /*--- Spot for catch all route ---*/
-  app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
+/*--- Spot for catch all route ---*/
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // set up listen on different port 
 const port = process.env.PORT || 3001;

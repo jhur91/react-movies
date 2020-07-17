@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import Comment from '../Comment/Comment';
+import Comment from '../Comment/Comment'
 
-export default class CommentsList extends Component {
-  render() {
-    return (
-      <div>
-        <Comment />
-        <Comment />
-        <Comment />
+function CommentsListPage(props) {
+  return (
+    <>
+      <h1>Comment List Below</h1>
+      <div className='PuppyListPage-grid'>
+
+        
+        {props.comments.map(comment => 
+          <Comment
+            comment={comment}
+            key={comment._id}
+          />
+        )}
       </div>
-    )
-  }
+    </>
+  );
 }
+
+export default CommentsListPage;
