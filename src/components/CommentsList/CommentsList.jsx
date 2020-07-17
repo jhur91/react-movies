@@ -13,6 +13,7 @@ function CommentsListPage(props) {
           <Comment
             comment={comment}
             key={comment._id}
+            handleDeleteComment={props.handleDeleteComment}
           />
           :
           ""

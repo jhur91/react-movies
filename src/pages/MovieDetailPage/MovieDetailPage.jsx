@@ -26,6 +26,7 @@ function MovieDetailPage(props) {
       <CommentsList 
         movie={movie.id}
         comments={props.comments}
+        handleDeleteComment={props.handleDeleteComment}
       />
     </>
   );
