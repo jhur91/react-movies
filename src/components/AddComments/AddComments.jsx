@@ -1,24 +1,36 @@
 import React, {Component} from 'react';
 
 class AddComments extends Component {
+  id=this.props.id
   state = {
     invalidForm: true,
     formData: {
       content: '',
       rating: '5',
-      // id: {props.id}
+      movie_id: ""
     }
   };
 
   formRef = React.createRef();
 
+  componentDidMount = () => { 
+    console.log(this.props.id)
+    this.setState({
+      movie_id: this.props.id
+    })
+  }
+
   handleSubmit = e => {
     e.preventDefault();
+    console.log(this.props.id)
+    const formData = {...this.state.formData, movie_id: this.props.id}
+    this.setState({ formData });
     this.props.handleAddComment(this.state.formData);
   };
 
   handleChange = e => {
-    const formData = {...this.state.formData, [e.target.name]: e.target.value};
+    const formData = {...this.state.formData, [e.target.name]: e.target.value, movie_id: this.props.id, user: this.props.user._id};
+
     this.setState({
       formData,
       invalidForm: !this.formRef.current.checkValidity()
@@ -42,7 +54,7 @@ class AddComments extends Component {
           </div>
 
           <div className="form-group">
-            <label>Ratin ( 1 - 5 )</label>
+            <label>Rating ( 1 - 5 )</label>
             <input
               className="form-control"
               name="rating"

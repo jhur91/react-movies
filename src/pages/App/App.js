@@ -85,6 +85,7 @@ class App extends Component {
           }/>
           <Route exact path='/details' render={({location}) => 
             <MovieDetailPage 
+              user={this.state.user}
               movies={this.state.movies}
               comments={this.state.comments}
               location={location}
