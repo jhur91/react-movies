@@ -12,3 +12,9 @@ const commentSchema = new Schema({
 })
 //create model for item
 module.exports = mongoose.model('Comment', commentSchema);
+
+
+
+
+
+// maybe user.type: mongoose.Schema.Types.ObjectId

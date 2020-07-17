@@ -1,0 +1,11 @@
+.movieCardImage {
+  height: 100%;
+  width: 25%;
+}
+
+.movieInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}

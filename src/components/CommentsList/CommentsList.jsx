@@ -11,6 +11,7 @@ function CommentsListPage(props) {
         {props.comments.map(comment => 
         comment.movie_id===props.movie ? 
           <Comment
+            user={props.user}
             comment={comment}
             key={comment._id}
             handleDeleteComment={props.handleDeleteComment}

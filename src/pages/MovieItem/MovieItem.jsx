@@ -1,4 +1,5 @@
 import React from 'react';
+import './MovieItem.css';
 import { Link } from 'react-router-dom';
 
 const MovieItem = ({movie}) => {
@@ -7,11 +8,10 @@ const MovieItem = ({movie}) => {
   return (
     <div className='MoviePage'>
         <div className='MoviePage-movie'>
-          <span>Title: </span>
           <Link to={{
             pathname: '/details',
             state: {movie} }}
-          >{movie.title}
+          ><img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt=""/>
             </Link>
         </div>
     </div>

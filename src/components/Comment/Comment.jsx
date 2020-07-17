@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function Comment(props) {
+  console.log(props.comment)
   return (
     <>
       <h3>{props.comment.content}</h3>
-
-      <Link
+      <h6> {props.user._id}</h6>
+      {props.comment.user == props.user._id ? (
+        <div>
+        <Link
           className='btn btn-xs btn-warning'
           to={{
             pathname: '/edit',
@@ -15,15 +18,21 @@ function Comment(props) {
           }}
         >
           EDIT
-      </Link>
+        </Link>
 
-      <button
-        className='btn btn-xs btn-danger margin-left-10'
-        onClick={() => props.handleDeleteComment(props.comment._id)}
-      >
-        DELETE
-      </button>
+        <button
+          className='btn btn-xs btn-danger margin-left-10'
+          onClick={() => props.handleDeleteComment(props.comment._id)}
+        >
+          DELETE
+        </button>
+        </div>
+      )
+        :
+        ""
+      }
     </>
+
   );
 }
 

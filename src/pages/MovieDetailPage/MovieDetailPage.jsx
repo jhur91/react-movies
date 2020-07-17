@@ -7,8 +7,7 @@ function MovieDetailPage(props) {
   // Refer to MovieListItem to see how movie is being passed via the <Link>
   const movie = props.location.state.movie;
   console.log(movie.id)
-  // make a new array from props.comments that has comments with this movie._id
-  // const movieComments = props.comments.map( comment => comment);
+
   
   return (
     <>
@@ -24,6 +23,7 @@ function MovieDetailPage(props) {
         handleAddComment={props.handleAddComment} 
       />
       <CommentsList 
+        user={props.user}
         movie={movie.id}
         comments={props.comments}
         handleDeleteComment={props.handleDeleteComment}

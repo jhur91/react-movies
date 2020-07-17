@@ -15,7 +15,6 @@ async function index(req, res) {
 
 async function create(req, res) {
   // console.log(req.user)
-  // req.body.user=req.user;
   console.log(req.body)
   const comment = await Comment.create(req.body);
   res.status(201).json(comment);
