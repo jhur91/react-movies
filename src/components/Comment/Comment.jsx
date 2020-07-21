@@ -11,7 +11,6 @@ function Comment(props) {
         <thead>
           <tr>
             <th>Date</th>
-            <th>User</th>
             <th>Review</th>
             <th>Rating</th>
           </tr>
@@ -23,7 +22,6 @@ function Comment(props) {
               month: "numeric",
               day: "2-digit"
             }).format(props.comment.createAt)}</td>
-            <td>{props.comment.name}</td>
             <td>{props.comment.content}</td>
             <td>{props.comment.rating}</td>
             {props.comment.user == (props.user && props.user._id) ? (

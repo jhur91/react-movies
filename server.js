@@ -11,6 +11,8 @@ require('./config/database');
 
 var usersRouter = require('./routes/api/users');
 var commentsRouter = require('./routes/api/comments');
+var newsApiRouter = require('./routes/api/newsApiRouter');
+
 
 // more basics
 var app = express();
@@ -21,7 +23,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 /*--- Spot for api routes ---*/
 app.use('/api/users', usersRouter);
+app.use(require('./config/auth'));
 app.use('/api/comments', commentsRouter);
+app.use('/api/newsApiRouter', newsApiRouter);
 
 /*--- Spot for catch all route ---*/
 app.get('/*', function(req, res) {
