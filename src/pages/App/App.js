@@ -29,11 +29,17 @@ class App extends Component {
 
   handleAddComment = async newCommentData => {
     const newComment = await commentAPI.create(newCommentData);
+    // newComment.user.name = this.state.user.name
+    const comment = newComment.comment;
+    comment.user = {};
+    comment.user.name = newComment.commentUser.name;
     this.setState(state => ({
-      comments: [...state.comments, newComment]
+      comments: [...state.comments, comment]
     }),
     // Using cb to wait for state to update before rerouting
-    () => this.props.history.push('/'));
+    // () => this.props.history.push('/'));
+    () => console.log('hi'));
+
   }
 
   handleUpdateComment = async updatedCommentData => {

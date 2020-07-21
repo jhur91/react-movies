@@ -16,11 +16,15 @@ function MovieDetailPage(props) {
         key={movie.id}
         movie={movie}
       />
+      {props.user ? 
       <AddComments 
         user={props.user}
         id={movie.id}
         handleAddComment={props.handleAddComment} 
       />
+      :
+      <div></div>
+}
       <CommentsList 
         user={props.user}
         movie={movie.id}

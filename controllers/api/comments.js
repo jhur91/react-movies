@@ -1,4 +1,6 @@
 const Comment = require('../../models/comment');
+const User = require('../../models/user');
+
 
 module.exports = {
   index,
@@ -8,7 +10,8 @@ module.exports = {
 };
 
 async function index(req, res) {
-  const comments = await Comment.find({});
+  const comments = await Comment.find({})
+  .populate("user")
   console.log(comments)
   res.status(200).json({comments});
 }
@@ -17,7 +20,9 @@ async function create(req, res) {
   // console.log(req.user)
   console.log(req.body)
   const comment = await Comment.create(req.body);
-  res.status(201).json(comment);
+  const commentUser = await User.findById(req.body.user);
+  const commentInfo = {comment, commentUser};
+  res.status(201).json(commentInfo);
 }
 
 async function update(req, res) {
