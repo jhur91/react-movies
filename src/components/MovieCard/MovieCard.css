@@ -1,6 +1,7 @@
 .movieCardImage {
-  height: 100%;
-  width: 25%;
+  height: 350px;
+  width: 350px;
+  margin: auto;
 }
 
 .movieInfo {
@@ -8,4 +9,13 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+}
+
+dl {
+  margin: auto 25px;
+}
+
+dt, dd {
+  border: 1px black solid;
+  margin: 2px;
 }

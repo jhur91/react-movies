@@ -40,6 +40,7 @@ class AddComments extends Component {
   render() {
     return (
       <>
+
         <h1>Add Comment</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
@@ -70,6 +71,7 @@ class AddComments extends Component {
             ADD COMMENT
           </button>
         </form>
+ 
       </>
     );
   }

@@ -8,7 +8,7 @@ function MovieCard({movie}) {
   return (
     <div className='panel panel-default'>
       <div className="panel-heading">
-        <h3 className='panel-title'>{movie.title}</h3>
+        <h1 className='panel-title'>{movie.title}</h1>
       </div>
       <div className='movieInfo'>
         <img className='movieCardImage' src={`https://image.tmdb.org/t/p/w500/${moviePoster}`} alt=""/>
@@ -18,7 +18,7 @@ function MovieCard({movie}) {
           <dd>{movie.release_date}</dd>
           <dt>Overview:</dt>
           <dd>{movie.overview}</dd>
-          
+          <br/>
           FANDANGO SEARCH: 
           <a href={`https://www.fandango.com/search?q=${movie.title}`}> Buy Tickets!</a>
         </dl>

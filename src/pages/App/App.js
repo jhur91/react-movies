@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import * as movieAPI from '../../services/movies-api';
 import * as commentAPI from '../../services/comments-api';
+import * as newsAPI from '../../services/news-api';
 import MoviesList from '../../components/MoviesList/MoviesList';
 import NavBar from '../../components/NavBar/NavBar';
+import NewsList from '../../components/NewsList/NewsList';
+import NewsDetailPage from '../NewsDetailPage/NewsDetailPage';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import EditCommentPage from '../EditCommentPage/EditCommentPage';
@@ -17,6 +20,7 @@ class App extends Component {
   state = {
     movies: [],
     comments: [],
+    news: [],
     user: userService.getUser()
   };
 
@@ -67,30 +71,47 @@ class App extends Component {
   async componentDidMount() {
     const allMovies = await movieAPI.getAll();
     const allComments = await commentAPI.getAll();
+    const allNews = await newsAPI.getAll();
     const movies = allMovies.results;
     const comments = allComments.comments;
+    const news = allNews.articles;
     this.setState({ 
       movies: movies,
-      comments: comments
+      comments: comments,
+      news: news
      });
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">Movies Review APP</header>
-          <nav>
-            <NavLink exact to='/'>Movies LIST</NavLink>
-          </nav>
+        <header className="App-header">Movies Review APP
+
+            <NavLink exact to='/' className="NavLink">Movies LIST</NavLink>
+            <br></br>
+            <NavLink exact to='/news' className="NavLink">News LIST</NavLink>
+  
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
             handleSignupOrLogin={this.handleSignupOrLogin}
           />
+          </header>
         <Switch>
           <Route exact path='/' render={() =>
             <MoviesList 
               movies={this.state.movies}
+            />
+          }/>
+          <Route exact path='/news' render={() =>
+            <NewsList 
+              news={this.state.news}
+            />
+          }/>
+          <Route exact path='/newsdetail' render={({location}) =>
+            <NewsDetailPage
+              news={this.state.news}
+              location={location}
             />
           }/>
           <Route exact path='/signup' render={({ history }) => 

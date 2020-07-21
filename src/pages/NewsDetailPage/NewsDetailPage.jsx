@@ -1,17 +1,24 @@
 import React from 'react';
-import MovieCard from '../../components/MovieCard/MovieCard';
-import AddComments from '../../components/AddComments/AddComments';
-import CommentsList from '../../components/CommentsList/CommentsList';
+import { Route, Link } from 'react-router-dom';
 
-function MovieDetailPage(props) {
+// import AddComments from '../../components/AddComments/AddComments';
+// import CommentsList from '../../components/CommentsList/CommentsList';
+
+function NewsDetailPage(props) {
   // Refer to MovieListItem to see how movie is being passed via the <Link>
-  const movie = props.location.state.movie;
-  console.log(movie.id)
 
+  const news = props.location.state.article;
+  
   
   return (
+
     <>
-      <MovieCard
+      {news.description} 
+      <br></br>
+      <a href={`${news.url}`}>Read More...</a>
+    
+
+      {/* <MovieCard
         movies={props.movies}
         key={movie.id}
         movie={movie}
@@ -26,8 +33,8 @@ function MovieDetailPage(props) {
         movie={movie.id}
         comments={props.comments}
         handleDeleteComment={props.handleDeleteComment}
-      />
+      /> */}
     </>
   );
 }
-export default MovieDetailPage;
+export default NewsDetailPage;
