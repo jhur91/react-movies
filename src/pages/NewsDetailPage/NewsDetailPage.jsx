@@ -11,7 +11,7 @@ function NewsDetailPage(props) {
 
     <>
       <h1>{news.title}</h1>
-      <h6>{news.author}</h6>
+      <h5>Author: {news.author}</h5>
       <img src={`${news.urlToImage}`} alt=""/>
       <h4>{news.description}</h4>
       <br></br>
