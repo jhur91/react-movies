@@ -12,6 +12,7 @@ const NewsItem = ({article}) => {
             state: {article} }}
           ><img src={`${article.urlToImage}`} alt=""/>
             </Link>
+            {<br></br>}
             {article.title}
         </div>
     </div>

@@ -1,11 +1,8 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-// import AddComments from '../../components/AddComments/AddComments';
-// import CommentsList from '../../components/CommentsList/CommentsList';
 
 function NewsDetailPage(props) {
-  // Refer to MovieListItem to see how movie is being passed via the <Link>
 
   const news = props.location.state.article;
   
@@ -13,27 +10,14 @@ function NewsDetailPage(props) {
   return (
 
     <>
-      {news.description} 
+      <h1>{news.title}</h1>
+      <h6>{news.author}</h6>
+      <img src={`${news.urlToImage}`} alt=""/>
+      <h4>{news.description}</h4>
       <br></br>
       <a href={`${news.url}`}>Read More...</a>
     
 
-      {/* <MovieCard
-        movies={props.movies}
-        key={movie.id}
-        movie={movie}
-      />
-      <AddComments 
-        user={props.user}
-        id={movie.id}
-        handleAddComment={props.handleAddComment} 
-      />
-      <CommentsList 
-        user={props.user}
-        movie={movie.id}
-        comments={props.comments}
-        handleDeleteComment={props.handleDeleteComment}
-      /> */}
     </>
   );
 }

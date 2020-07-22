@@ -1,26 +1,45 @@
-# Ktown Finder
-### This is a web app that allows users to post articles about Korean communities from all around the world.  It is a commonly used phrase in the Korean community, "you can find Koreans anywhere." From this idea, this app will help users learn about Korean communities from a user-to-user perspective. You may log in with your google account and add articles or comments.  If you would like to just read, then you do not need to log in.  Some features that users get are the adding, editing, and deleting of their own articles and comments!
+# FilmReview
+### This is a web app that allows users to see the details of currently released movies, which are pulled from a third-party API. If users are logged in, they can leave reviews on these movies with full CRUD functionality. Users can also follow links to news articles, which have also been fetched from an API.
 
 
-![Home Screen](https://i.imgur.com/Z7ZQZ7E.png "Home Screen")
+## App Views 
+
+![Movies List](https://i.imgur.com/Fz1IIRr.png "Movies List")
 ---
-![Article Index](https://i.imgur.com/0aUi9kJ.png "Article Index")
+![Movie Details Page](https://i.imgur.com/8lM247L.png "Movie Details Page")
 ---
-![New Article](https://i.imgur.com/G0x4pDx.png "New Article")
+![News List](https://i.imgur.com/L8drUps.png "News List")
 ---
-![Article Show](https://i.imgur.com/q7gyX3N.jpg "Article Show")
+![News Details Page](https://i.imgur.com/DXR7zOH.png "News Details Page")
 ---
 
 
 
-# Technologies Used
-### HTML, CSS, Javascript, Node.js, Mongoose, MongoDB
+
+## Technologies Used:
+- MERN Stack (MongoDB, Express, React, Node.js)
+- HTML
+- CSS
+- Javascript
+- Mongoose
+- Heroku
+
+## Project Management Technologies:
+- Lucid Chart
+- Trello
+- Github
+
+
 
 # Getting Started
-### Follow the following link to read about your favorite KoreaTown
-[Ktown Finder](https://project2-ktown.herokuapp.com/)
+### Follow the link to see currently playing movies and entertainment news!
+[FilmReview](https://filmreview.herokuapp.com/)
 
 
-# Next Steps
-### Moving forward, I plan on improving the styling and user interface.  In terms of features, I would like to create a user profile page, with their user names as links to this page from the articles and comments.  In general, I would like to improve the user interface to be consistent with apps we use on a daily basis.
 
+## Next Steps:
+Moving forward, I plan on adding these features or updates at a later time to both optimize our app and user experience.
+- Create a profile page that shows favorite movies and past comments.
+- Allow users to sort/filter movies in particular orders.
+- Create a likes/dislikes button feature.
+- Improve user experience and styling.
