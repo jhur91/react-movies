@@ -11,7 +11,7 @@ function NewsList(props){
         <h1>News List</h1>
 
         <div className='MoviesList'>
-        <div><br/><h1>Welcome to FilmReview!</h1><br/><h3>Sign up and start reviewing these films that are </h3><h3>CURRENTLY RELEASED!</h3></div>
+        <div><br/><h1>Welcome to FilmReview!</h1><br/><h3>Get Your Latest Entertainment News Here!</h3></div>
           {props.news.map( (article, idx) =>
         <div>
           <NewsItem 

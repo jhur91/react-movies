@@ -1,68 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ktown Finder
+### This is a web app that allows users to post articles about Korean communities from all around the world.  It is a commonly used phrase in the Korean community, "you can find Koreans anywhere." From this idea, this app will help users learn about Korean communities from a user-to-user perspective. You may log in with your google account and add articles or comments.  If you would like to just read, then you do not need to log in.  Some features that users get are the adding, editing, and deleting of their own articles and comments!
 
-## Available Scripts
 
-In the project directory, you can run:
+![Home Screen](https://i.imgur.com/Z7ZQZ7E.png "Home Screen")
+---
+![Article Index](https://i.imgur.com/0aUi9kJ.png "Article Index")
+---
+![New Article](https://i.imgur.com/G0x4pDx.png "New Article")
+---
+![Article Show](https://i.imgur.com/q7gyX3N.jpg "Article Show")
+---
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Technologies Used
+### HTML, CSS, Javascript, Node.js, Mongoose, MongoDB
 
-### `npm test`
+# Getting Started
+### Follow the following link to read about your favorite KoreaTown
+[Ktown Finder](https://project2-ktown.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Next Steps
+### Moving forward, I plan on improving the styling and user interface.  In terms of features, I would like to create a user profile page, with their user names as links to this page from the articles and comments.  In general, I would like to improve the user interface to be consistent with apps we use on a daily basis.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

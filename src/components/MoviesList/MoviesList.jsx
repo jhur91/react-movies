@@ -12,7 +12,7 @@ function MoviesList(props){
         {/* <h1>Movies List</h1> */}
 
         <div className='MoviesList'>
-        <div><br/><h1>Welcome to FilmReview!</h1><br/><h3>Sign up and start reviewing these films that are </h3><h3>CURRENTLY RELEASED!</h3></div>
+        <div><br/><h1>Welcome to FilmReview!</h1><br/><h3>Sign up and start reviewing films that are </h3><h3>CURRENTLY RELEASED!</h3></div>
           {props.movies.map( (movie, idx) =>
         <div>
         <MovieItem 

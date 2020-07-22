@@ -91,7 +91,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Movies Review APP
+        <header className="App-header">FilmReview
 
             <NavLink exact to='/' className="NavLink">Movies LIST</NavLink>
             <br></br>
