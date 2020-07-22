@@ -2,6 +2,7 @@
 ### This is a web app that allows users to see the details of currently released movies, which are pulled from a third-party API. If users are logged in, they can leave reviews on these movies with full CRUD functionality. Users can also follow links to news articles, which have also been fetched from an API.
 
 
+
 ## App Views 
 
 ![Movies List](https://i.imgur.com/Fz1IIRr.png "Movies List")
@@ -12,7 +13,6 @@
 ---
 ![News Details Page](https://i.imgur.com/DXR7zOH.png "News Details Page")
 ---
-
 
 
 
@@ -38,7 +38,7 @@
 
 
 ## Next Steps:
-Moving forward, I plan on adding these features or updates at a later time to both optimize our app and user experience.
+Moving forward, I plan on adding these features and improvements to both optimize the app and user experience.
 - Create a profile page that shows favorite movies and past comments.
 - Allow users to sort/filter movies in particular orders.
 - Create a likes/dislikes button feature.
