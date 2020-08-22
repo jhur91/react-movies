@@ -19,3 +19,7 @@ dt, dd {
   border: 1px black solid;
   margin: 2px;
 }
+
+.panel-footer {
+  margin: 7% 0 4% 0;
+}

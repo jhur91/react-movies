@@ -3,7 +3,7 @@ import Comment from '../Comment/Comment'
 
 function CommentsListPage(props) {
   return (
-    <>
+    <div className="CommentsList">
       <h1>Comment List Below</h1>
       <div className='PuppyListPage-grid'>
 
@@ -20,7 +20,7 @@ function CommentsListPage(props) {
           ""
         )}
       </div>
-    </>
+    </div>
   );
 }
 

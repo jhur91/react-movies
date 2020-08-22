@@ -21,6 +21,7 @@ class App extends Component {
     movies: [],
     comments: [],
     news: [],
+    menuClicked: false,
     user: userService.getUser()
   };
 
@@ -72,6 +73,12 @@ class App extends Component {
     this.setState({ user: null });
   }
 
+  handleMenuClick = () => {
+    this.setState(
+      {menuClicked:!this.state.menuClicked}
+    )
+  }
+
   /*--- Lifecycle Methods ---*/
 
   async componentDidMount() {
@@ -91,21 +98,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">FilmReview
-
+        <header className="App-header">
+        
+        <button className="openbtn" onClick={this.handleMenuClick}><img src="https://img.icons8.com/ios/72/menu.png" alt=""/></button>
+        <div className="sidebar" id="mySidebar" style={this.state.menuClicked ? {"display": "block"}: {"display": "none"}}>
+          <div className="closebtn-container" ><button className="closebtn" onClick={this.handleMenuClick}>X</button></div>
             <NavLink exact to='/' className="NavLink">Movies LIST</NavLink>
             <br></br>
             <NavLink exact to='/news' className="NavLink">News LIST</NavLink>
-  
+        </div>
+          <NavLink exact to='/' className="FilmReviewTitle">FilmReview</NavLink>
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
             handleSignupOrLogin={this.handleSignupOrLogin}
           />
           </header>
-        <Switch>
+        <Switch >
           <Route exact path='/' render={() =>
             <MoviesList 
+              className="MoviesList"
               movies={this.state.movies}
             />
           }/>
@@ -148,9 +160,8 @@ class App extends Component {
               location={location}
             />
           }/>
-
-
         </Switch>
+        <footer><div className="footerText">Created by Jason Hur</div></footer>
 
       </div>
     );

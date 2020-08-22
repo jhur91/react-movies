@@ -2,6 +2,7 @@ import React from 'react';
 import MovieCard from '../../components/MovieCard/MovieCard';
 import AddComments from '../../components/AddComments/AddComments';
 import CommentsList from '../../components/CommentsList/CommentsList';
+import './MovieDetailPage.css'
 
 function MovieDetailPage(props) {
   // Refer to MovieListItem to see how movie is being passed via the <Link>
@@ -10,7 +11,8 @@ function MovieDetailPage(props) {
 
   
   return (
-    <>
+    <div className="MovieDetailPage">
+      <div>
       <MovieCard
         movies={props.movies}
         key={movie.id}
@@ -31,7 +33,8 @@ function MovieDetailPage(props) {
         comments={props.comments}
         handleDeleteComment={props.handleDeleteComment}
       />
-    </>
+      </div>
+    </div>
   );
 }
 export default MovieDetailPage;

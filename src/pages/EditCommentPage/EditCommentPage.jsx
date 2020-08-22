@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import './EditCommentPage.css';
 
 class EditCommentPage extends Component {
   state = {
@@ -26,7 +27,8 @@ class EditCommentPage extends Component {
   render() {
     console.log(this.state)
     return (
-      <>
+      <div className="EditCommentPage">
+        <div className="EditCommentPageContainer">
         <h1>Edit Comment</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
@@ -58,7 +60,8 @@ class EditCommentPage extends Component {
           </button>&nbsp;&nbsp;
           <Link to='/'>CANCEL</Link>
         </form>
-      </>
+        </div>
+      </div>
     );
   }
 }

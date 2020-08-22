@@ -1,0 +1,9 @@
+.MovieDetailPage {
+  background-image: linear-gradient(to bottom right, red, orange, black );
+  margin: auto 5%;
+  padding: 10% 0;
+}
+
+.CommentsList {
+  height: 1x
+}

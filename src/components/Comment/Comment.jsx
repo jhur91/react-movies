@@ -6,7 +6,7 @@ import './Comment.css';
 function Comment(props) {
   console.log(props.comment)
   return (
-    <>
+    <div className="Comment">
       <table>
         <thead>
           <tr>
@@ -54,7 +54,7 @@ function Comment(props) {
         </tbody>
       </table>
 
-    </>
+    </div>
 
   );
 }

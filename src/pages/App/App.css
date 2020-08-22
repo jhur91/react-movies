@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: rgb(239, 239, 239));
+  /* background-image: url("https://thumbs.dreamstime.com/b/cinema-seamless-pattern-simple-geometric-wallpaper-movie-camera-digital-paper-art-texture-flat-vector-background-184306248.jpg"); */
+  background-image: url("https://fsa.zobj.net/crop.php?r=YYbjif1EaL7AxOskfVkwlskpsZ6EZFgkDIBPlV-zJTYEFwKmvGo6e82OraiQV1UT5HE6fjZ9-MAfuHQy_QJfQAyKyCMaYkxObnlmwV4fXVeYBlD_ApgcsMHKC24RGoY-NTvNow4dFTgA3dhq");
 }
 
 .App-logo {
@@ -15,14 +16,109 @@
 }
 
 .App-header {
-  background-color: rgb(20, 58, 112);
-  min-height: 10vh;
+  
+  background-image: linear-gradient(to bottom right, black, orange, red );
+  max-height: 5vh;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-shadow: 0 5px 5px black;
+  border-bottom-right-radius: 1%;
+  border-bottom-left-radius: 1%;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.App #navbar {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 10%;
+}
+
+.App .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -50px;
+  padding-top: 10%;
+  background-color: rgba(179, 191, 209, .9);
+  box-shadow: 8px 3px 7px black;
+  border: 1px solid white;
+}
+
+.App .sidebar a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 22px;
+  color: rgb(88, 111, 146);
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.4s;
+  text-shadow: 0px 3px 3px white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 94%;
+}
+
+.App .sidebar a:hover {
+  color: white;
+  text-shadow: 0px 3px 3px black;
+}
+
+.App .closebtn {
+  background-color: rgb(131, 149, 176);
+  margin-right: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  text-shadow: 0px 3px 3px black;
+  box-shadow: 3px 3px 3px black;
+  font-weight: bold;
+  position: fixed;
+  top: 1px;
+  
+}
+
+.App .closebtn:hover {
+  background-color: rgb(88, 111, 146);
+}
+
+.App .closebtn-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.App .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: white;
+  padding: 2px 0 0 4px;
+  border: 2px solid rgb(131, 149, 176);
+  border-radius: 25px;
+  box-shadow: 2px 5px 5px black;
+  outline: none;
+}
+
+.App .openbtn:hover {
+  background-color: rgb(221, 226, 235);;
 }
 
 .App-link {
@@ -41,3 +137,27 @@
 .NavLink {
   background-color: rgb(239, 239, 239);
 }
+
+.FilmReviewTitle {
+  font-size: 50px;
+  color: black;
+}
+
+.MoviesList {
+  margin: 5% 5% 0 5%;
+
+}
+
+
+footer {
+  height: 1px;
+
+}
+
+.footerText {
+  display: flex;
+  color: white;
+  background: black;
+  
+}
+

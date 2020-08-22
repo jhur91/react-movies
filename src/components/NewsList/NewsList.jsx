@@ -1,14 +1,13 @@
 import React from 'react';
-
 import { Route, Switch, Link } from 'react-router-dom';
 import NewsItem from '../../pages/NewsItem/NewsItem';
+import "./NewsList.css"
 
 function NewsList(props){
   // let moviePoster = movie.poster_path;
 
     return(
-      <>
-        <h1>News List</h1>
+      <div className="NewsList">
 
         <div className='MoviesList'>
         <div><br/><h1>Welcome to FilmReview!</h1><br/><h3>Get Your Latest Entertainment News Here!</h3></div>
@@ -21,7 +20,7 @@ function NewsList(props){
           </div>
           )}
         </div>
-      </>
+      </div>
     );
 }
 

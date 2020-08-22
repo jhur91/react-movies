@@ -7,3 +7,7 @@ table {
 tr{
   border-bottom: 1px black solid;
 }
+
+.Comment {
+  height: 30vh
+}

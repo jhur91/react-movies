@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import './NewsDetailPage.css'
 
 
 function NewsDetailPage(props) {
@@ -9,7 +10,7 @@ function NewsDetailPage(props) {
   
   return (
 
-    <>
+    <div className="NewsDetail">
       <h1>{news.title}</h1>
       <h5>Author: {news.author}</h5>
       <img src={`${news.urlToImage}`} alt=""/>
@@ -18,7 +19,7 @@ function NewsDetailPage(props) {
       <a href={`${news.url}`}>Read More...</a>
     
 
-    </>
+    </div>
   );
 }
 export default NewsDetailPage;

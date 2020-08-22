@@ -3,4 +3,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  background-image: linear-gradient(to bottom right, red, orange, black );
+  height: 90%;
+  width: 90%;
+  border: 5px solid black;
+  border-radius: 1%;
 }

@@ -1,4 +1,4 @@
-.LoginPage {
+.EditCommentPage {
   padding: 10% 0;
   color: white;
   height: 65vh;
@@ -7,13 +7,10 @@
 
 }
 
-.LoginContainer {
+.EditCommentPageContainer {
   background-color: black;
   height: 50%;
   width: 50%;
   border-radius: 50%;
 }
 
-.LoginTitle {
-  font-size: 35px;
-}
