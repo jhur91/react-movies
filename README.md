@@ -5,7 +5,7 @@
 
 ## App Views 
 
-![Movies List](https://i.imgur.com/Fz1IIRr.png "Movies List")
+![Movies List](https://i.imgur.com/efOMpJa.jpg "Movies List")
 ---
 ![Movie Details Page](https://i.imgur.com/pzU526k.png "Movie Details Page")
 ---
