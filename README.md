@@ -7,11 +7,11 @@
 
 ![Movies List](https://i.imgur.com/Fz1IIRr.png "Movies List")
 ---
-![Movie Details Page](https://i.imgur.com/8lM247L.png "Movie Details Page")
+![Movie Details Page](https://i.imgur.com/pzU526k.png "Movie Details Page")
 ---
-![News List](https://i.imgur.com/L8drUps.png "News List")
+![News List](https://i.imgur.com/LTpd6FE.png "News List")
 ---
-![News Details Page](https://i.imgur.com/DXR7zOH.png "News Details Page")
+![News Details Page](https://i.imgur.com/JVNzvCn.png "News Details Page")
 ---
 
 
